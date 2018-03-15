@@ -7,12 +7,13 @@ module.exports = (app) => {
   app.use('/', router);
 };
 
-router.get('/', (req, res, next) => {
-	Post.find((err, Posts) => {
+router.get('/', function (req, res, next) {
+	Post.find().populate('author').populate('category').exec(function (err, Posts) {
+		return res.jsonp(Posts);
 		if (err) return next(err);
 		res.render('blog/index', {
-		title: 'Generator-Express MVC',
-		Posts: Posts
+			title: 'Generator-Express MVC',
+			Posts: Posts
 		});
 	});
 });
