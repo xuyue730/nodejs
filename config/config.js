@@ -9,7 +9,7 @@ const config = {
 			name: 'nodejs'
 		},
 		port: process.env.PORT || 3000,
-		db: 'mongodb://localhost/nodejs-development'
+		db: 'mongodb://localhost/nodeblog'
 	},
 
 	test: {
