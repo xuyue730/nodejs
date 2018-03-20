@@ -156,12 +156,14 @@ h6, .h6 {
 .post-meta>span {
   display: inline-block;
   margin: 0 5px;
+  border-right: 1px solid #ddd;
 }
 .post-meta>span:first-of-type {
   margin-left: 0;
 }
 .post-meta>span:last-of-type {
   margin-right: 0;
+  border-right: 0;
 }
 
 
