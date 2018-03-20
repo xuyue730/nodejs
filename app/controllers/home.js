@@ -11,8 +11,8 @@ router.get('/', (req, res, next) => {
 	Article.find((err, articles) => {
 		if (err) return next(err);
 		res.render('blog/index', {
-		title: 'Generator-Express MVC',
-		articles: articles
+			title: 'Generator-Express MVC',
+			articles: articles
 		});
 	});
 });
