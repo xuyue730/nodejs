@@ -137,17 +137,34 @@ h6, .h6 {
  * Blog posts
  */
 
-.blog-post {
-  margin-bottom: 60px;
+.post {
+  margin-bottom: 40px;
 }
-.blog-post-title {
-  margin-bottom: 5px;
-  font-size: 40px;
+.post-title {
+  border-bottom: 1px solid #eee;
+  padding: 0 0 5px 0;
 }
-.blog-post-meta {
-  margin-bottom: 20px;
-  color: #999;
+
+.post-abstract {
+
 }
+
+.post-meta {
+  font-size: 0.75em;
+}
+
+.post-meta>span {
+  display: inline-block;
+  margin: 0 5px;
+}
+.post-meta>span:first-of-type {
+  margin-left: 0;
+}
+.post-meta>span:last-of-type {
+  margin-right: 0;
+}
+
+
 
 
 /*
