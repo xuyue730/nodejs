@@ -6,7 +6,7 @@ block content
 			h3.post-title
 				=post.title
 			div.post-abstract
-				=post.content
+				=truncate(post.content,150)
 			div.post-meta
 				span.post-created 
 					发布时间
@@ -25,3 +25,14 @@ block content
 					=post.meta.favorite
 				span.post-link
 					a(href="/posts/view/"+ post._id,target="_blank") 查看全文
+	if pageCount > 1
+		nav
+			ul.pagination
+				- var currentPage = 1
+				while currentPage < pageCount
+					if (currentPage == pageNum)
+						li.page-item.active
+							a.page-link(href="/posts?page="+currentPage)=currentPage++
+					else
+						li.page-item
+							a.page-link(href="/posts?page="+currentPage)=currentPage++

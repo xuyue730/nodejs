@@ -3,6 +3,8 @@ const glob = require('glob');
 
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const moment = require('moment');
+const truncate = require('truncate');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const compress = require('compression');
@@ -18,6 +20,8 @@ module.exports = (app, config) => {
 
 	app.use(function(req,res,next){
 		app.locals.pageName = req.path;
+		// app.locals.moment = moment;
+		app.locals.truncate = truncate;
 		next();					//继续执行下去
 	})
 
